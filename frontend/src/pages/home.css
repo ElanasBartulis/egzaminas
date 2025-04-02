@@ -1,0 +1,12 @@
+.main-container {
+    width: 1280px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .create {
+    margin-bottom: 1rem;
+    width: 400px;
+  }

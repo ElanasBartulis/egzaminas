@@ -1,0 +1,14 @@
+.create {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 2rem;
+  
+    input {
+      padding: 0.5rem;
+    }
+  
+    textarea {
+      padding: 3rem;
+    }
+  }

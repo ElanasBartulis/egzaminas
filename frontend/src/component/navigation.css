@@ -1,0 +1,17 @@
+nav {
+    ul {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      list-style: none;
+    }
+  
+    .logout {
+      color: red;
+    }
+  }
