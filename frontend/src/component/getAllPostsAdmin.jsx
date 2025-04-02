@@ -8,7 +8,7 @@ export default function GetAllPostsAdmin() {
   useEffect(() => {
     async function getPosts() {
       try {
-        const response = await fetch(`http://localhost:3002/api/post/all`, {
+        const response = await fetch(`http://localhost:3002/api/post/allLogged`, {
           method: "GET",
           credentials: "include",
         });

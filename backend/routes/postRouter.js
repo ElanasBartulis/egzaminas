@@ -3,6 +3,7 @@ import * as postController from "../controllers/postController.js";
 
 const router = express.Router();
 
+router.get("/allLogged", postController.getAllPostsLoggedIn);
 router.get("/all", postController.getAllPosts);
 router.get("/all/:id", postController.getAllPostsByUserId);
 router.post("/create", postController.createPost);

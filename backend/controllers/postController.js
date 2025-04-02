@@ -2,7 +2,7 @@ import postModel from "../models/postModel.js";
 import userModel from "../models/userModel.js";
 import { postSchema } from "../utils/validations/postSchema.js";
 
-export async function getAllPosts(req, res) {
+export async function getAllPostsLoggedIn(req, res) {
   const allPosts = await postModel.findAll({
     include: [
       {
@@ -11,6 +11,19 @@ export async function getAllPosts(req, res) {
       },
     ],
   });
+
+  try {
+    if (!allPosts) {
+      return res.status(404).json({ error: "No posts found" });
+    }
+    res.status(201).json(allPosts);
+  } catch (error) {
+    res.status(500).json("Something is wrong", error);
+  }
+}
+
+export async function getAllPosts(req, res) {
+  const allPosts = await postModel.findAll();
 
   try {
     if (!allPosts) {
