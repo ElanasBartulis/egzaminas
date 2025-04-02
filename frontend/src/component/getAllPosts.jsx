@@ -1,9 +1,7 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./getAllPostsUser.css";
-import SessionContext from "../context/sessionContext.js";
 
 export default function GetAllPosts() {
-  const { posts, setPosts } = useContext(SessionContext);
   const [allPosts, setAllPosts] = useState([]);
 
   useEffect(() => {
